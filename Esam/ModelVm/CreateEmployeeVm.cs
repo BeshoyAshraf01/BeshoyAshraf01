@@ -8,7 +8,7 @@ using Validation;
 
 public class CreateEmployeeVm{
     [Required(ErrorMessage = "Name is required"), MinLength(10, ErrorMessage = "Name must be at least 10 characters long")]
-    [CheckNameIsUnick]
+    [CheckNameIsUnique]
     public string Name { get; set; }
 
     public double Salary { get; set; }
